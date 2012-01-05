@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block navigation %}{% endblock navigation %}
+
+{% block main %}
+<h2>当前操作需要登录后进行</h2>
+<form action="{% url django.contrib.auth.views.login %}" method="post">
+  {% include 'form.html' %}
+  <input type="hidden" name="next" value="{{ next }}" />
+  <input type="submit" value="登录" />
+</form>
+{% endblock main %}

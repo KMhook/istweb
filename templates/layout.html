@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% block page_title %}首页{% endblock %} - 广东省信息安全重点实验室
+  </title>
+  <link href="{{ STATIC_URL }}css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+    <link href="{{ STATIC_URL }}css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <style type="text/css">
+    #navigation li a.{% block current_tab %}home{% endblock %} {
+      background-color: #ee4400;
+    }
+  </style>
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+<div id="page">
+  {% block header %}
+  <div id="header">
+    <div id="logo"><h1>广东省信息安全重点实验室</h1></div>
+    <div id="logout"><a href="/logout">注销</a></div>
+  </div> <!-- header end -->
+  {% endblock header %}
+
+  {% block navigation %}
+  <ul id="navigation">
+    <li> <a href="{% url root %}" class="home">首页</a> </li>
+    <li> <a href="{% url contacts_index %}" class="contacts">通讯录</a> </li>
+    <li> <a href="{% url contacts_me %}" class="profile">个人资料</a> </li>
+    <li> <a href="#" class="about">关于</a> </li>
+  </ul>
+  {% endblock %}
+
+  {% if messages %}
+  <div id="flash-messages">
+      {% for message in messages %}
+      <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+      {% endfor %}
+  </div>
+  {% endif %}
+
+  <div id="main">
+    {% block main %}
+
+    <div id="main-content">
+    {% block main_content %}
+    {% endblock main_content %}
+    </div>
+
+    <div id="main-sidebar">
+    {% block main_sidebar %}
+      <h2>实验室成员</h2>
+      <ul id="contacts-list">
+        {% for contact in contacts_list %}
+          <li><a href="{% url contacts_show contact.user.username %}">{{ contact.fullname|default:"暂无姓名" }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endblock main_sidebar %}
+    </div>
+
+    {% endblock main %}
+  </div>
+
+  <div id="footer">
+    <p>版权所有 &copy; 2011 广东省信息安全重点实验室</p>
+    <p>Designed by <a href="http://blog.iwinux.info">Limbo Peng</a></p>
+  </div>
+</div>
+</body>
+</html>

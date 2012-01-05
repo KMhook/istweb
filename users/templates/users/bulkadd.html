@@ -1,0 +1,24 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}批量创建用户{% endblock title %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <style type="text/css">
+    label, textarea {
+      display: block;
+    }
+
+    textarea {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+{% endblock extrastyle %}
+
+{% block content %}
+<form action="{% url users_bulkadd %}" method="post">
+  {% include 'form.html' %}
+  <input type="submit" value="Go" />
+</form>
+{% endblock content %}

@@ -1,0 +1,170 @@
+@import compass/css3
+@import blueprint/reset
+@import blueprint
+
+$blueprint-grid-columns   : 14
+$blueprint-container-size : 960px
+$blueprint-grid-margin    : 20px
+$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin
+
+$blueprint-font-family: Helvetica, Arial, "Microsoft Yahei", "WenQuanYi Micro Hei", STXihei, SimHei, sans-serif
+$blueprint-font-size: 12px
+
++blueprint-typography
++blueprint-interaction
++blueprint-utilities
+
+body
+  background: url(../images/afterdark.png)
+
+a
+  text-decoration: none
+
+dl
+  dt
+    @extend .text-shadow
+    +column(1)
+    width: 160px
+    font-size: 16px
+    font-weight: bold
+    text-align: justify
+    clear: left
+  dd
+    +column(5, true)
+    font-size: 14px
+    margin: 2px 0 0 0
+    width: 280px
+
+ul, ol, p
+  margin: 0
+  padding: 0
+
+.button-like
+  padding: 8px 14px
+  +border-radius
+  border: none
+  background-color: #2459a0
+  color: #fff
+
+  &:hover
+    cursor: pointer
+    background-color: #ccc
+    color: #333
+
+form
+  label, input[type=text], input[type=password], input[type=submit]
+    display: block
+    font-size: 1.2em
+  input[type=text], input[type=password]
+    width: 240px
+    padding: 7px
+    border: 1px solid #ccc
+    outline: none
+
+    &:focus
+      border: 1px solid #ee4400
+  input[type=submit]
+    margin-top: 10px
+    @extend .button-like
+  .errorlist
+    margin-bottom: 10px
+    list-style-type: none
+    color: red
+
+thead th
+  background-color: lighten(#2459a0, 30%)
+  color: #fff
+
+  &:first-child
+    +border-left-radius
+  &:last-child
+    +border-right-radius
+
+h2
+  color: #e40
+  +text-shadow(#999, 1px, 1px, 0px)
+
+#page
+  +container
+  margin-top: 20px
+  padding: 30px 40px
+  background-color: #fff
+  +border-radius(10px)
+
+#logo h1
+  +column(14, true)
+  +text-shadow(#aaa, 0, 0, 5px)
+
+#navigation
+  +column(14, true)
+  margin: 15px 0 30px 0
+  list-style-type: none
+
+  li
+    float: left
+    width: 180px
+    margin-right: 2px
+
+    a
+      display: block
+      padding: 5px
+      font-size: 16px
+      line-height: 1.8
+      text-align: center
+      background-color: #2459a0
+      color: #fff
+
+      &:hover
+        background-color: #ccc
+        color: #333
+
+    &:first-child a
+      +border-left-radius(10px)
+    &:last-child a
+      +border-right-radius(10px)
+
+#flash-messages
+  clear: both
+
+#main
+  +column(14, true)
+  margin-bottom: 20px
+
+#main-content
+  +column(9.8)
+  +append(0.2)
+  +border(#ddd, 2px)
+  border-right: 2px dotted #ddd
+
+#main-sidebar
+  +prepend(0.2)
+  +column(3.8, true)
+
+#footer
+  +column(14, true)
+  padding-top: 10px
+  text-align: center
+  color: #999
+  border-top: 2px dotted #ddd
+
+#contacts-list
+  list-style-type: none
+  font-size: 16px
+
+body.homepage
+  .notification
+    h3
+      margin-bottom: 8px
+    .date
+      color: #999
+      font-size: 0.9em
+    .content
+      margin-top: 10px
+      font-size: 1.1em
+
+body.contacts-me
+  #actions
+    margin-top: 15px
+    a
+      @extend .button-like
+      margin-right: 15px

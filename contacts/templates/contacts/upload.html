@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}上传个人资料{% endblock %}
+{% block current_tab %}contacts{% endblock %}
+
+{% block main %}
+<form action="{% url contacts_upload %}" method="post" enctype="multipart/form-data">
+  {% include 'form.html' %}
+  <input type="submit" value="上传" />
+</form>
+{% endblock main %}
