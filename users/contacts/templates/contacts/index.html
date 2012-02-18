@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}实验室通讯录{% endblock %}
+{% block body_class %}contacts{% endblock %}
+{% block current_tab %}contacts{% endblock %}
+
+{% block main %}
+<table id="contacts">
+  <thead>
+    <th>姓名</th>
+    <th>Email</th>
+    <th>电话号码</th>
+    <th>QQ</th>
+    <th></th>
+  </thead>
+
+  <tbody>
+    {% for contact in contacts %}
+    <tr>
+      <td>{{ contact.fullname|default:"暂无" }}</td>
+      <td>{{ contact.email|default:"暂无" }}</td>
+      <td>{{ contact.phone|default:"暂无" }}</td>
+      <td>{{ contact.qq|default:"暂无" }}</td>
+      <td>
+        <a href="{% url contacts_show contact.user.username %}">查看</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock main %}

@@ -29,6 +29,7 @@ class Contact(models.Model):
     phone = models.CharField(max_length=15, default='', verbose_name=u'电话号码')
     qq = models.CharField(max_length=15, default='', verbose_name=u'QQ 号码')
 
+    douban_id = models.CharField(max_length=15, default='', verbose_name=u'豆瓣ID') 
     objects = ContactManager()
 
 
@@ -39,4 +40,4 @@ class ContactUploadForm(forms.Form):
 class ContactEditForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ('fullname', 'email', 'phone', 'qq')
+        fields = ('fullname', 'email', 'phone', 'qq', 'douban_id')

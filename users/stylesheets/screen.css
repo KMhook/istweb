@@ -1,0 +1,762 @@
+@charset "UTF-8";
+/* line 4, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 6, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  font-size: 100.01%;
+}
+
+/* line 16, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 18, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" "";
+}
+/* line 45, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 20, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 22, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 39, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+body {
+  line-height: 1.5;
+  font-family: Helvetica, Arial, "Microsoft Yahei", "WenQuanYi Micro Hei", STXihei, SimHei, sans-serif;
+  color: #333333;
+  font-size: 75%;
+}
+
+/* line 65, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: #222222;
+}
+/* line 66, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+/* line 67, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.50em;
+}
+
+/* line 68, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+
+/* line 69, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1.00em;
+}
+
+/* line 70, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+
+/* line 71, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.50em;
+}
+
+/* line 72, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* line 73, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+p {
+  margin: 0 0 1.5em;
+}
+/* line 74, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+p img.left {
+  display: inline;
+  float: left;
+  margin: 1.5em 1.5em 1.5em 0;
+  padding: 0;
+}
+/* line 75, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+p img.right {
+  display: inline;
+  float: right;
+  margin: 1.5em 0 1.5em 1.5em;
+  padding: 0;
+}
+
+/* line 77, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+a {
+  text-decoration: underline;
+  color: #000099;
+}
+/* line 18, ../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+a:visited {
+  color: #000066;
+}
+/* line 21, ../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+a:focus {
+  color: black;
+}
+/* line 24, ../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+a:hover {
+  color: black;
+}
+/* line 27, ../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+a:active {
+  color: #cc0099;
+}
+
+/* line 78, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+blockquote {
+  margin: 1.5em;
+  color: #666666;
+  font-style: italic;
+}
+
+/* line 79, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 80, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+em {
+  font-style: italic;
+}
+
+/* line 81, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+dfn {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 82, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+sup, sub {
+  line-height: 0;
+}
+
+/* line 83, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #666666;
+}
+
+/* line 84, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+address {
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+
+/* line 85, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+del {
+  color: #666666;
+}
+
+/* line 86, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+pre {
+  margin: 1.5em 0;
+  white-space: pre;
+}
+
+/* line 87, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+pre, code, tt {
+  font: 1em "andale mono", "lucida console", monospace;
+  line-height: 1.5;
+}
+
+/* line 88, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+li ul, li ol {
+  margin: 0;
+}
+
+/* line 89, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+ul, ol {
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 3.333em;
+}
+
+/* line 90, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+ul {
+  list-style-type: disc;
+}
+
+/* line 91, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 92, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+dl {
+  margin: 0 0 1.5em 0;
+}
+/* line 93, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+dl dt {
+  font-weight: bold;
+}
+
+/* line 94, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+dd {
+  margin-left: 1.5em;
+}
+
+/* line 95, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+table {
+  margin-bottom: 1.4em;
+  width: 100%;
+}
+
+/* line 96, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+th {
+  font-weight: bold;
+}
+
+/* line 97, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+thead th {
+  background: #c3d9ff;
+}
+
+/* line 98, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+th, td, caption {
+  padding: 4px 10px 4px 5px;
+}
+
+/* line 99, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+tr.even td {
+  background: #e5ecf9;
+}
+
+/* line 100, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+tfoot {
+  font-style: italic;
+}
+
+/* line 101, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+caption {
+  background: #eeeeee;
+}
+
+/* line 102, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.quiet {
+  color: #666666;
+}
+
+/* line 103, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+.loud {
+  color: #111111;
+}
+
+/* line 4, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.error {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid #dddddd;
+  background: #fbe3e4;
+  color: #8a1f11;
+  border-color: #fbc2c4;
+}
+/* line 29, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.error a {
+  color: #8a1f11;
+}
+
+/* line 6, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.notice {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid #dddddd;
+  background: #fff6bf;
+  color: #514721;
+  border-color: #ffd324;
+}
+/* line 37, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.notice a {
+  color: #514721;
+}
+
+/* line 8, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.success {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid #dddddd;
+  background: #e6efc2;
+  color: #264409;
+  border-color: #c6d880;
+}
+/* line 45, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.success a {
+  color: #264409;
+}
+
+/* line 10, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.hide {
+  display: none;
+}
+
+/* line 12, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.highlight {
+  background: yellow;
+}
+
+/* line 14, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.added {
+  background: #006600;
+  color: white;
+}
+
+/* line 16, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
+.removed {
+  background: #990000;
+  color: white;
+}
+
+/* line 9, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.clear {
+  clear: both;
+}
+
+/* line 12, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* line 16, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 18, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.small {
+  font-size: 0.8em;
+  margin-bottom: 1.875em;
+  line-height: 1.875em;
+}
+
+/* line 22, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.large {
+  font-size: 1.2em;
+  line-height: 2.5em;
+  margin-bottom: 1.25em;
+}
+
+/* line 26, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.first {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* line 29, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.last {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* line 32, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.top {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* line 35, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
+.bottom {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* line 17, ../sass/screen.sass */
+body {
+  background: url(../images/afterdark.png);
+}
+
+/* line 20, ../sass/screen.sass */
+a {
+  text-decoration: none;
+}
+
+/* line 24, ../sass/screen.sass */
+dl dt {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  width: 50px;
+  width: 160px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: justify;
+  clear: left;
+}
+/* line 138, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html dl dt {
+  overflow-x: hidden;
+}
+/* line 32, ../sass/screen.sass */
+dl dd {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 330px;
+  font-size: 14px;
+  margin: 2px 0 0 0;
+  width: 280px;
+}
+/* line 138, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html dl dd {
+  overflow-x: hidden;
+}
+
+/* line 38, ../sass/screen.sass */
+ul, ol, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 42, ../sass/screen.sass */
+.button-like, form input[type=submit], body.contacts-me #actions a {
+  padding: 8px 14px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2459a0;
+  color: white;
+}
+/* line 49, ../sass/screen.sass */
+.button-like:hover, form input[type=submit]:hover, body.contacts-me #actions a:hover {
+  cursor: pointer;
+  background-color: #cccccc;
+  color: #333333;
+}
+
+/* line 55, ../sass/screen.sass */
+form label, form input[type=text], form input[type=password], form input[type=submit] {
+  display: block;
+  font-size: 1.2em;
+}
+/* line 58, ../sass/screen.sass */
+form input[type=text], form input[type=password] {
+  width: 240px;
+  padding: 7px;
+  border: 1px solid #cccccc;
+  outline: none;
+}
+/* line 64, ../sass/screen.sass */
+form input[type=text]:focus, form input[type=password]:focus {
+  border: 1px solid #ee4400;
+}
+/* line 66, ../sass/screen.sass */
+form input[type=submit] {
+  margin-top: 10px;
+}
+/* line 69, ../sass/screen.sass */
+form .errorlist {
+  margin-bottom: 10px;
+  list-style-type: none;
+  color: red;
+}
+
+/* line 74, ../sass/screen.sass */
+thead th {
+  background-color: #7ca7e1;
+  color: white;
+}
+/* line 78, ../sass/screen.sass */
+thead th:first-child {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -khtml-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* line 80, ../sass/screen.sass */
+thead th:last-child {
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* line 83, ../sass/screen.sass */
+h2 {
+  color: #ee4400;
+  text-shadow: #999999 1px 1px 0px;
+}
+
+/* line 87, ../sass/screen.sass */
+#page {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 20px;
+  padding: 30px 40px;
+  background-color: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 94, ../sass/screen.sass */
+#logo h1 {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 960px;
+  text-shadow: #aaaaaa 0 0 5px;
+}
+/* line 138, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #logo h1 {
+  overflow-x: hidden;
+}
+
+/* line 98, ../sass/screen.sass */
+#navigation {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 960px;
+  margin: 15px 0 30px 0;
+  list-style-type: none;
+}
+/* line 138, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #navigation {
+  overflow-x: hidden;
+}
+/* line 103, ../sass/screen.sass */
+#navigation li {
+  float: left;
+  width: 180px;
+  margin-right: 2px;
+}
+/* line 108, ../sass/screen.sass */
+#navigation li a {
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  background-color: #2459a0;
+  color: white;
+}
+/* line 117, ../sass/screen.sass */
+#navigation li a:hover {
+  background-color: #cccccc;
+  color: #333333;
+}
+/* line 121, ../sass/screen.sass */
+#navigation li:first-child a {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -khtml-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -o-border-bottom-left-radius: 10px;
+  -ms-border-bottom-left-radius: 10px;
+  -khtml-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* line 123, ../sass/screen.sass */
+#navigation li:last-child a {
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -khtml-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -o-border-bottom-right-radius: 10px;
+  -ms-border-bottom-right-radius: 10px;
+  -khtml-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* line 126, ../sass/screen.sass */
+#flash-messages {
+  clear: both;
+}
+
+/* line 129, ../sass/screen.sass */
+#main {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 960px;
+  margin-bottom: 20px;
+}
+/* line 138, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main {
+  overflow-x: hidden;
+}
+
+/* line 133, ../sass/screen.sass */
+#main-content {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  width: 666px;
+  padding-right: 8px;
+  padding-right: 8px;
+  margin-right: 10px;
+  border-right: 2px solid #dddddd;
+  border-right: 2px dotted #dddddd;
+}
+/* line 138, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main-content {
+  overflow-x: hidden;
+}
+
+/* line 139, ../sass/screen.sass */
+#main-sidebar {
+  padding-left: 8px;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 246px;
+}
+/* line 138, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #main-sidebar {
+  overflow-x: hidden;
+}
+
+/* line 143, ../sass/screen.sass */
+#footer {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 960px;
+  padding-top: 10px;
+  text-align: center;
+  color: #999999;
+  border-top: 2px dotted #dddddd;
+}
+/* line 138, ../../../../../../usr/share/compass/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #footer {
+  overflow-x: hidden;
+}
+
+/* line 150, ../sass/screen.sass */
+#contacts-list {
+  list-style-type: none;
+  font-size: 16px;
+}
+
+/* line 156, ../sass/screen.sass */
+body.homepage .notification h3 {
+  margin-bottom: 8px;
+}
+/* line 158, ../sass/screen.sass */
+body.homepage .notification .date {
+  color: #999999;
+  font-size: 0.9em;
+}
+/* line 161, ../sass/screen.sass */
+body.homepage .notification .content {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+/* line 166, ../sass/screen.sass */
+body.contacts-me #actions {
+  margin-top: 15px;
+}
+/* line 168, ../sass/screen.sass */
+body.contacts-me #actions a {
+  margin-right: 15px;
+}

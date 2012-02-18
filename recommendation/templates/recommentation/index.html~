@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block main_content %}
+<h1>实验室推荐书籍</h1>
+<div id="reco_books">
+   {% for book in reco %}
+   <div class="books">
+      <img src="{{ book.link.2.href }}"</img>
+      <div>书名:<a href="{{ book.link.1.href }}">{{ book.title.text }}</a></div>
+      <div>作者：
+      {% for author in book.author %}
+      {{ author.name.text }}<br/>
+      {% endfor %}
+      </div>
+   </div>
+   {% endfor %}
+
+</div>
+{% endblock main_content %}

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body_class %}homepage{% endblock %}
+
+{% block main_content %}
+<h2>实验室新闻 & 通知</h2>
+
+{% for notification in notifications %}
+
+<div class="notification">
+  <h3>{{ notification.title }}</h3>
+  <p class="date">
+  发布时间：{{ notification.created_at|date:"Y-m-d H:i" }} | 
+  更新时间：{{ notification.updated_at|date:"Y-m-d H:i" }}
+  </p>
+  <div class="content">{{ notification.content|safe }}</div>
+</div>
+
+{% empty %}
+
+<p>暂时没有任何新闻和通知。</p>
+
+{% endfor %}
+
+{% endblock main_content %}

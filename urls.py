@@ -10,6 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^login/$', 'django.contrib.auth.views.login', { 'template_name': 'users/login.html' }),
     url(r'^logout/$', 'django.contrib.auth.views.logout_then_login'),
+    url(r'^recommendation/', include('istweb.recommendation.urls')),
 
     url(r'^admin/auth/user/bulkadd/$', 'users.views.bulkadd', name='users_bulkadd'),
     url(r'^admin/', include(admin.site.urls)),

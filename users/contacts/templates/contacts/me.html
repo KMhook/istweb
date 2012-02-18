@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}个人资料{% endblock %}
+{% block body_class %}contacts-me{% endblock %}
+{% block current_tab %}profile{% endblock %}
+
+{% block main %}
+<h2>个人资料</h2>
+<dl>
+  <dt>姓名</dt>
+  <dd>{{ contact.fullname|default:"暂无" }}</dd>
+  <dt>Email</dt>
+  <dd>{{ contact.email|default:"暂无" }}</dd>
+  <dt>电话号码</dt>
+  <dd>{{ contact.phone|default:"暂无" }}</dd>
+  <dt>QQ</dt>
+  <dd>{{ contact.qq|default:"暂无" }}</dd>
+</dl>
+
+<div class="clear"></div>
+
+<p id="actions">
+  <a href="{% url contacts_upload %}">上传个人页面</a>
+  <a href="{% url contacts_edit %}">编辑个人资料</a>
+</p>
+{% endblock main %}

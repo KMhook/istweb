@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}更新个人资料{% endblock %}
+{% block current_tab %}contacts{% endblock %}
+
+{% block main %}
+<form action="{% url contacts_edit %}" method="post">
+  {% include 'form.html' %}
+  <input type="submit" value="保存" />
+</form>
+{% endblock main %}

@@ -5,6 +5,7 @@ from django.core.urlresolvers import reverse
 from django.contrib.admin.views.decorators import staff_member_required
 from django import forms
 from annoying.decorators import render_to
+from django.contrib.auth import logout
 
 from helpers import create_users_from_list
 
@@ -24,3 +25,4 @@ def bulkadd(request):
             return HttpResponseRedirect(reverse('admin:auth_user_changelist'))
         else:
             return { 'form': form }
+

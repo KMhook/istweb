@@ -21,7 +21,7 @@
   {% block header %}
   <div id="header">
     <div id="logo"><h1>广东省信息安全重点实验室</h1></div>
-    <div id="logout"><a herf="logout">注销</a></div>
+    <div id="logout"><a href="/logout">注销</a></div>
   </div> <!-- header end -->
   {% endblock header %}
 
@@ -30,6 +30,7 @@
     <li> <a href="{% url root %}" class="home">首页</a> </li>
     <li> <a href="{% url contacts_index %}" class="contacts">通讯录</a> </li>
     <li> <a href="{% url contacts_me %}" class="profile">个人资料</a> </li>
+    <li> <a href="{% url recommendation_index %}" class="recommendation">推荐书籍</a></li>
     <li> <a href="#" class="about">关于</a> </li>
   </ul>
   {% endblock %}

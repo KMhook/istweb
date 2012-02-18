@@ -1,0 +1,5 @@
+django
+django-debug-toolbar
+django-annoying
+-e hg+http://bitbucket.org/andrewgodwin/south#egg=south
+beautifulsoup

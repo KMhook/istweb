@@ -60,6 +60,7 @@ def edit(request):
             contact.email = contact_info.get('email')
             contact.phone = contact_info.get('phone')
             contact.qq = contact_info.get('qq')
+            contact.douban_id = contact_info.get('douban_id')
 
         form = ContactEditForm(instance=contact)
     elif request.method == 'POST':
