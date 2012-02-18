@@ -27,6 +27,9 @@ class Migration(SchemaMigration):
         db.add_column('contacts_contact', 'qq',
                       self.gf('django.db.models.fields.CharField')(default='', max_length=15),
                       keep_default=False)
+        db.add_column('contacts_contact', 'douban_id',
+                      self.gf('django.db.models.fields.CharField')(default='', max_length=15),
+                      keep_default=False)
 
     def backwards(self, orm):
         # Deleting field 'Contact.fullname'
