@@ -83,6 +83,7 @@ thead th
 h2
   color: #e40
   +text-shadow(#999, 1px, 1px, 0px)
+  padding-bottom: 0
 
 #page
   +container
@@ -91,13 +92,24 @@ h2
   background-color: #fff
   +border-radius(10px)
 
-#logo h1
-  +column(14, true)
-  +text-shadow(#aaa, 0, 0, 5px)
+#logo
+  display: inline-block
+  width: 600px
+  h1
+    display: block
+    +column(14, true)
+    +text-shadow(#aaa, 0, 0, 5px)
+    width: 600px
+    margin-bottom: 0
+
+#logout
+  display: inline-block
+  margin-left: 290px
+
 
 #navigation
   +column(14, true)
-  margin: 15px 0 30px 0
+  margin: 15px 0 30px 15px
   list-style-type: none
 
   li
@@ -168,3 +180,20 @@ body.contacts-me
     a
       @extend .button-like
       margin-right: 15px
+
+.books
+  list-style: none
+  width: 500px
+
+.book
+  overflow: hidden
+  margin-top: 10px
+  padding-bottom: 10px
+  border-bottom: 1px dashed #ddd
+  .book-cover
+    float: left
+    width: 80px
+    text-align: center
+  .book-info
+    float: right
+    width: 400px

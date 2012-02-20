@@ -5,19 +5,27 @@
 
 {% block main_content %}
 <h1>成员推荐书籍</h1>
-<div id="reco_books">
+<ul class="books">
    {% for book in reco %}
-   <div class="books">
-      <a href="{{ book.link.1.href }}"><img src="{{ book.link.2.href }}"</img></a>
-      <div>书名:<a href="{{ book.link.1.href }}">{{ book.title.text }}</a></div>
-      <div>作者：
-      {% for author in book.author %}
-      {{ author.name.text }}<br/>
-      {% endfor %}
+   <li class="book">
+      <div class="book-cover">
+          <a href="{{ book.link.1.href }}"><img src="{{ book.link.2.href }}"</img></a>
       </div>
-   </div>
+
+      <div class="book-info">
+          <div class="book-name">
+              书名: <a href="{{ book.link.1.href }}">{{ book.title.text }}</a>
+          </div>
+          <div class="book-author">
+              作者：
+              {% for author in book.author %}
+                {{ author.name.text }}<br/>
+              {% endfor %}
+          </div>
+      </div>
+   </li>
    {% endfor %}
 
-</div>
+</ul>
 
 {% endblock main_content %}

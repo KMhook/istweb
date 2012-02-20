@@ -1,3 +1,5 @@
+import sys
+
 # Create your views here.
 from annoying.decorators import render_to
 from django.template import Context
@@ -5,7 +7,8 @@ from contacts.models import Contact
 try:
    from douban.service import DoubanService
    from douban.client import OAuthClient
-except ImportError:
+except ImportError, e:
+   print e
    print 'please install douban-python'
    sys.exit(0)
 

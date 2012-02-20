@@ -1,3 +1,6 @@
 *.pyc
 *.swp
 istweb_db
+.sass-cache/
+uploads/
+build/
