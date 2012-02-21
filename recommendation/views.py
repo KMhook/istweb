@@ -4,6 +4,7 @@ import sys
 from annoying.decorators import render_to
 from django.template import Context
 from contacts.models import Contact
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 try:
    from douban.service import DoubanService
    from douban.client import OAuthClient
@@ -22,7 +23,18 @@ service = DoubanService(API_KEY, SECRET)
 @render_to('recommentation/index.html')
 def index(request):
    get_reco()
-   return {'reco': reco_books};
+
+   paginator = Paginator(reco_books, 5)
+   page = request.GET.get('page')
+   if not page:
+      page = 1
+   try:
+      pages = paginator.page(page)
+   except PageNotAnInteger:
+      pages = paginator.page(1)
+   except EmptyPage:
+      pages = paginator.page(paginator.num_pages)
+   return {'books': pages.object_list, 'page': pages}
 
 def get_reco():
    member = Contact.objects.all()
