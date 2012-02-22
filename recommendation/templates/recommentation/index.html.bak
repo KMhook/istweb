@@ -6,7 +6,7 @@
 {% block main_content %}
 <h1>成员推荐书籍</h1>
 <ul class="books">
-   {% for book in reco %}
+   {% for book in books %}
    <li class="book">
       <div class="book-cover">
           <a href="{{ book.link.1.href }}"><img src="{{ book.link.2.href }}"</img></a>
@@ -30,14 +30,14 @@
 
 <div class="pagination">
    <span class="step-links">
-      {% if reco.has_previous %}
-      <a href="?page={{ reco.previous_page_number }}">previous</a>
+      {% if page.has_previous %}
+      <a href="?page={{ page.previous_page_number }}">previous</a>
       {% endif %}
       <span class="current">
-         Page {{ reco.number }} of {{ reco.paginator.num_pages }}.
+         Page {{ page.number }} of {{ page.paginator.num_pages }}.
       </span>
-      {% if reco.has_next %}
-      <a href="?page={{ reco.next_page_number }}">next</a>
+      {% if page.has_next %}
+      <a href="?page={{ page.next_page_number }}">next</a>
       {% endif %}
    </span>
 </div>

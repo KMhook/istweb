@@ -4,6 +4,7 @@
 {% block current_tab %}contacts{% endblock %}
 
 {% block main %}
+{{ type }}
 <form action="{% url contacts_edit %}" method="post">
   {% include 'form.html' %}
   <input type="submit" value="保存" />

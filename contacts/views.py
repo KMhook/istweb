@@ -47,12 +47,12 @@ def upload(request):
 @render_to('contacts/edit.html')
 def edit(request):
     user = request.user
-    contact = Contact.objects.by_user(user)
-
+    contact = Contact.objects.by_user(user) or Contact(user=user)
+    '''
     if not contact:
         messages.error(request, u'请先上传个人页面')
         return HttpResponseRedirect(reverse('contacts_upload'))
-
+    '''
     if request.method == 'GET':
         if request.session.get('contact_info'):
             contact_info = request.session.pop('contact_info')
@@ -65,13 +65,12 @@ def edit(request):
         form = ContactEditForm(instance=contact)
     elif request.method == 'POST':
         form = ContactEditForm(request.POST, instance=contact)
-
         if form.is_valid():
             form.save()
             messages.success(request, u'个人资料已更新')
             return HttpResponseRedirect(reverse('root'))
 
-    return { 'form': form }
+    return { 'form': form}
 
 
 @render_to('contacts/me.html')

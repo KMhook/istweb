@@ -37,8 +37,8 @@ class Notification(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def save(self):
-       super(Notification, self).save()
+ ##   def save(self):
+ ##      super(Notification, self).save()
        #subj = 
        #server = connect()
        #sendmessage(server, to, subj, text)
