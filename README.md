@@ -1,12 +1,12 @@
 # 部署方法
 
 1. pip install -r requirements.txt 安装依赖的包。
-2. 配置数据库（步骤略）
-3. python manage.py syncdb
-4. python manage.py migrate
-5. python manage.py collectstatic
-6. 配置 nginx + gunicorn （步骤略）
-7. 安装douban-python 与 gdata
+2. 安装 vender 目录内的 douban-python 与 gdata (python setup.py install)
+3. 配置数据库（步骤略）
+4. python manage.py syncdb
+5. python manage.py migrate
+6. python manage.py collectstatic
+7. 配置 nginx + gunicorn （步骤略）
 
 ## 补充说明
 
