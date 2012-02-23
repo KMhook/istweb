@@ -1,0 +1,70 @@
+===0.4===
+December 30, 2009 (revision 55)
+
+- add GetImageLink (thank taoyh23)
+
+===0.3.0===
+May 16, 2009 (revision 50)
+
+- a bunch of changes (sorry for no detail)
+
+===0.2.4===
+October 28, 2008 (revision 42)
+
+- __init__.py
+  - Add class EventEntry and EventFeed.
+  - Add method EventEntryFromString and EventFeedFromString.
+  - Add When and Where.
+- service.py
+  - Add GetEvent to DoubanService, which can help to access EventEntry.
+  - Add GetEvents to DoubanService, which can help to access user's Events.
+  - Add GetEventWishers to DoubanService, which can help to access event's
+    wishers.
+  - Add GetEventParticipants to DoubanService, which can help to access
+    event's participants.
+  - Add GetLocationEvents to DoubanService, which can help to access events in
+    particular location.
+  - Add SearchEvents to DoubanService, which can help to search events.
+  - Add AddEvent to DoubanService, which can help to add event.
+  - Add UpdateEvent to DoubanService, which can help to update event.
+  - Add DeleteEvent to DoubanService, which can help to delete event.
+
+
+===0.2.3===
+August 26, 2008 (revision 33)
+
+- __init__.py
+  - Add class NoteEntry and NoteFeed.
+  - Add method NoteEntryFromString and NoteFeedFromString.
+  - Add Attribute to CollectionEntry.
+- service.py
+  - Change method GetMyCollection, which help to get user's private or public collections.
+  - Add support for privacy setting in  method AddCollection.
+  - Add GetNote to DoubanService, which can help to access NoteEntry.
+  - Add GetMyNotes to DoubanService, which can help to access user's notes.
+  - Add AddNote to DoubanService, which can help to add notes.
+  - Add UpdateNote to DoubanService, which can help to update notes.
+  - Add DeleteNote to DoubanService, which can help to delete notes.
+
+===0.2.2===
+August 17, 2008 (revision 32)
+
+- __init__.py
+  - Add class BroadcastingEntry and BroadcastingFeed.
+  - Add method BroadcastingEntryFromString and BroadcastingFeedFromString.
+- service.py
+  - Add GetBroadcastingFeed to DoubanService, which can help to access user's broadcasting.
+  - Add GetContactsBroadcastingFeed to DoubanService, which can help to access contacts' broadcasting.
+  - Add AddBroadcasting to DoubanService, which can help to add broadcasting.
+  - Add DeleteBroadcasting to DoubanService, which can help to delete broadcasting.
+
+=== 0.2 ===
+August 6, 2008 (revision 26)
+
+- Added GetAuthorizedUID method to DoubanService class, which can help to get current authorized user.
+- Added db:uid for PeopleEntry class, which stands for username.
+- Added GetFriends and GetContacts method to DoubanService.
+- Added GetCollection method to DoubanService.
+- Changed Collection related url from /people/{userID}/collection/{cid}  to  /collection/{cid} 
+- Added GetCollectionLink method to Subject class.
+- Added another parameter "orderby" to GetReviewFeed method. 

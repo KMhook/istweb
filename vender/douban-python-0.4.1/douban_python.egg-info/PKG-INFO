@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: douban-python
+Version: 0.4.1
+Summary: Python client library for Douban APIs
+Home-page: http://www.douban.com/service/apidoc/
+Author: Qiangning Hong
+Author-email: hongqn@gmail.com
+License: Apache 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
