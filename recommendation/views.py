@@ -9,9 +9,8 @@ try:
    from douban.service import DoubanService
    from douban.client import OAuthClient
 except ImportError, e:
-   print e
    print 'please install douban-python'
-   sys.exit(0)
+   sys.exit(1)
 
 class DoubanBooks(object):
 
@@ -56,11 +55,9 @@ class DoubanBooks(object):
 
 @render_to('recommentation/index.html')
 def index(request):
-   page = request.GET.get('page')
+   page = request.GET.get('page', 1)
    reco_books = DoubanBooks()
    reco_books.get_reco()
-   if not page:
-      page = 1
    paginator = Paginator(reco_books.reco, 5)
    try:
       pages = paginator.page(page)
@@ -69,4 +66,3 @@ def index(request):
    except EmptyPage:
       pages = paginator.page(paginator.num_pages)
    return {'books': pages.object_list, 'page': pages}
-
