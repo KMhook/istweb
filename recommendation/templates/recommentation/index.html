@@ -6,24 +6,33 @@
 {% block main_content %}
 <h1>成员推荐书籍</h1>
 <ul class="books">
-   {% for book in books %}
+   {{ temp }}
+   {% for tmp in books %}
+      {% for key, value in tmp.items %}
    <li class="book">
       <div class="book-cover">
-          <a href="{{ book.link.1.href }}"><img src="{{ book.link.2.href }}"</img></a>
+          <a href="{{ value.0.link.1.href }}"><img src="{{ value.0.link.2.href }}"</img></a>
       </div>
 
       <div class="book-info">
           <div class="book-name">
-              书名: <a href="{{ book.link.1.href }}">{{ book.title.text }}</a>
+              书名: <a href="{{ value.0.link.1.href }}">{{ value.0.title.text }}</a>
           </div>
           <div class="book-author">
               作者：
-              {% for author in book.author %}
+              {% for author in value.0.author %}
                 {{ author.name.text }}<br/>
               {% endfor %}
           </div>
+          <div class="reco_people">
+             推荐成员：
+          {% for person in value.1|slice:":5" %}
+             {{ person }}
+          {% endfor %}
+          </div>
       </div>
    </li>
+   {% endfor %}
    {% endfor %}
 
 </ul>
