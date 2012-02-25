@@ -6,6 +6,7 @@
 {% block main_content %}
 <h1>成员推荐书籍</h1>
 <ul class="books">
+<<<<<<< HEAD
    {% for tmp in reco_book %}
    <li class="book">
       <div class="book-cover">
@@ -26,6 +27,35 @@
           </div>
       </div>
    </li>
+=======
+   {{ temp }}
+   {% for tmp in books %}
+      {% for key, value in tmp.items %}
+       <li class="book">
+          <div class="book-cover">
+              <a href="{{ value.0.link.1.href }}"><img src="{{ value.0.link.2.href }}"</img></a>
+          </div>
+
+          <div class="book-info">
+              <div class="book-name">
+                  书名: <a href="{{ value.0.link.1.href }}">{{ value.0.title.text }}</a>
+              </div>
+              <div class="book-author">
+                  作者：
+                  {% for author in value.0.author %}
+                    {{ author.name.text }} &nbsp;&nbsp;
+                  {% endfor %}
+              </div>
+              <div class="reco_people">
+                 推荐成员：
+              {% for person in value.1|slice:":5" %}
+                 {{ person }}
+              {% endfor %}
+              </div>
+          </div>
+       </li>
+       {% endfor %}
+>>>>>>> b1c8816ac8ea98d36c60779864c3b00117e60127
    {% endfor %}
 
 </ul>
@@ -36,7 +66,7 @@
       <a href="?page={{ page.previous_page_number }}">previous</a>
       {% endif %}
       <span class="current">
-         Page {{ page.number }} of {{ page.paginator.num_pages }}.
+         Page {{ page.number }} of {{ page.paginator.num_pages }}
       </span>
       {% if page.has_next %}
       <a href="?page={{ page.next_page_number }}">next</a>
