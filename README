@@ -6,6 +6,8 @@
 4. python manage.py migrate
 5. python manage.py collectstatic
 6. 配置 nginx + gunicorn （步骤略）
+7. 用celery来做定时任务，依赖的包已写进requirements.txt,之后syncdb，migrate
+8. ./manage.py celeryd -s celerybeat-schedule -v 2 -B -l INFO
 
 ## 补充说明
 

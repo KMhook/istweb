@@ -2,6 +2,9 @@
 import os
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 relative_to_project_root = lambda *x: os.path.join(PROJECT_ROOT, *x)
+import djcelery
+djcelery.setup_loader()
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,7 +14,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': relative_to_project_root('istweb_db'),
         'USER': 'istweb_proj',                      # Not used with sqlite3.
         'PASSWORD': '123456',                  # Not used with sqlite3.
@@ -73,6 +76,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'contacts.views.contacts_list',
 )
 
+CARROT_BACKEND = "django"
+
 INSTALLED_APPS = (
     'south',
     'django.contrib.auth',
@@ -85,11 +90,20 @@ INSTALLED_APPS = (
     'users',
     'contacts',
     'notification',
+    'djcelery',
+    'ghettoq',
+    'kombu.transport.django',
     'recommendation',
 )
+BROKER_BACKEND = 'djkombu.transport.DatabaseTransport'
+
+BROKER_HOST = 'localhost'
+BROKER_PORT = 5672
+BROKER_USER = "hukm"
+BROKER_PASSWORD = "123"
+BROKER_VHOST = '/'
 
 ROOT_URLCONF = 'istweb.urls'
-
 LOGIN_URL = '/login'
 LOGOUT_URL = '/logout'
 LOGIN_REDIRECT_URL = '/'
