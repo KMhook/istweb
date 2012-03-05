@@ -1,0 +1,40 @@
+class DoubanBooks(object):
+
+    def __init__(self):
+        self.HOST = 'http://www.douban.com'
+        self.API_KEY = "0ff1b8ce70b305ab2fd52a6b52191101"
+        self.SECRET = "47c2cb706c4ec51d"
+        self.reco_books = []
+        self.subjects = []
+        self.reco = []
+        self.href = []
+        self.service = DoubanService(self.API_KEY, self.SECRET)
+
+    def get_reco(self):
+        member = Contact.objects.all()
+        for tmp in member:
+            feed_read = self.service.GetMyCollection('/people/%s/collection'  % tmp.douban_id, 'book', 'IST','read')
+            self.get_book(feed_read, tmp.fullname)
+            feed_reading = self.service.GetMyCollection('/people/%s/collection' % tmp.douban_id, 'book', 'IST','reading')
+            self.get_book(feed_reading, tmp.fullname)
+            feed_wish = self.service.GetMyCollection('/people/%s/collection' % tmp.douban_id, 'book', 'IST','wish')
+            self.get_book(feed_wish, tmp.fullname)      
+
+    def get_book(self, feed, fullname):
+        for entry in feed.entry:
+            book_href = entry.link[1].href
+            self.href.append(book_href[21:])
+            subject_id = book_href[35:]
+            if subject_id not in self.subjects:
+                book_href = book_href[21:]
+                bookfeed = self.service.GetBook(book_href)
+                self.subjects.append(subject_id)
+                self.reco.append((bookfeed, [fullname], subject_id))
+                continue
+            else:
+                for tmp in self.reco:
+                   if tmp[2] == subject_id:
+                        if fullname not in tmp[1]:
+                            tmp[1].append(fullname)
+                            continue
+
